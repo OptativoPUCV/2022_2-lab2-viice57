@@ -150,3 +150,20 @@ list.c:45:17: error: assignment to ‘Node *’ from incompatible pointer type �
 cc1: all warnings being treated as errors
 Compilation failed
 3d1efe6
+Fri 19 Aug 2022 12:35:05 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:44:7: error: implicit declaration of function ‘first’ [-Werror=implicit-function-declaration]
+   44 |   x = first(list);
+      |       ^~~~~
+list.c:44:5: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   44 |   x = first(list);
+      |     ^
+list.c:45:17: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   45 |   list->current = x;
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+041105e
