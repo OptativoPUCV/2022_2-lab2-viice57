@@ -243,3 +243,9 @@ list.c:49:9: error: unused variable ‘x’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 6f382dd
+Fri 19 Aug 2022 12:45:04 PM UTC: 
+ list.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  2|5
+total_score: 15/70
+47d4b31
