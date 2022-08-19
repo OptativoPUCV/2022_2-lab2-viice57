@@ -341,3 +341,8 @@ list.c:52:23: error: ‘List’ {aka ‘struct List’} has no member named ‘n
       |                       ^~
 Compilation failed
 1a4013b
+Fri 19 Aug 2022 01:00:03 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+3d47dc2
