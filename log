@@ -229,3 +229,17 @@ list.c:52:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 7c6584b
+Fri 19 Aug 2022 12:44:56 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:49:13: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   49 |   int * x = list->current->next;
+      |             ^~~~
+list.c:49:9: error: unused variable ‘x’ [-Werror=unused-variable]
+   49 |   int * x = list->current->next;
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+6f382dd
