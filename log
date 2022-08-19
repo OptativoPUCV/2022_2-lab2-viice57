@@ -433,3 +433,17 @@ Fri 19 Aug 2022 01:11:09 PM UTC:
  tests:  9|3
 total_score: 35/70
 7acff04
+Fri 19 Aug 2022 01:16:40 PM UTC: 
+ list.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:67:20: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   67 |   if(!list) return NULL;
+      |                    ^~~~
+list.c:66:6: note: declared here
+   66 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ed98c11
