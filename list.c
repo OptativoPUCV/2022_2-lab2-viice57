@@ -49,7 +49,6 @@ void * nextList(List * list) {
   if(!list->current) return NULL;
   
   Node * x = list->current;
-  list->current = x->next;
   return x->next->data;
   list->current = x->next;
 }
