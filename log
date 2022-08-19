@@ -172,3 +172,15 @@ Fri 19 Aug 2022 12:38:58 PM UTC:
  1 file changed, 3 insertions(+), 5 deletions(-)
  tests:  0|0
 89f12da
+Fri 19 Aug 2022 12:39:33 PM UTC: 
+ list.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:43:28: error: expected ‘;’ before ‘)’ token
+   43 |   return (list)->head->data);
+      |                            ^
+      |                            ;
+list.c:43:28: error: expected statement before ‘)’ token
+Compilation failed
+e54054d
