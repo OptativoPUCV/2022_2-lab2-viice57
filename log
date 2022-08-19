@@ -136,3 +136,17 @@ Fri 19 Aug 2022 12:30:25 PM UTC:
  tests:  1|5
 total_score: 10/70
 13d60b4
+Fri 19 Aug 2022 12:34:35 PM UTC: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:44:5: error: assignment to ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   44 |   x = list->head;
+      |     ^
+list.c:45:17: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   45 |   list->current = x;
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+3d1efe6
