@@ -94,8 +94,14 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    list->current->prev = list->current->next;
-    return list->current->data;
+  Node * current = list->current;
+  
+  if(!current) return NULL;
+  
+  current->prev->next = list->current->next;
+  current->next->prev = list->current->next;
+
+  return current;
 }
 
 void cleanList(List * list) {
