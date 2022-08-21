@@ -98,9 +98,14 @@ void * popCurrent(List * list) {
   Node * head = list->head;
   
   if(!current || !head) return NULL;
+
+  if(head == current) {
+    current->next->prev = NULL;
+    head = current->next;
+  }
   
-  current->prev->next = list->current->next;
-  current->next->prev = list->current->prev;
+  current->prev->next = current->next;
+  current->next->prev = current->prev;
 
   return current->data;
 }
