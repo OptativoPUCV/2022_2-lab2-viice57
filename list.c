@@ -110,8 +110,8 @@ void * popCurrent(List * list) {
     tail = current->prev;
   }
   
-  current->prev->next = current->next;
-  current->next->prev = current->prev;
+  //current->prev->next = current->next;
+  //current->next->prev = current->prev;
 
   return current->data;
 }
