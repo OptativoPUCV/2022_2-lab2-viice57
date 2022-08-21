@@ -106,7 +106,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  Node * current = list->current;
+  /*Node * current = list->current;
   
   if(!current) return NULL;
 
@@ -126,7 +126,7 @@ void * popCurrent(List * list) {
   current->next->prev = current->prev;
   current = current->next;
 
-  free(current);
+  free(current);*/
   return NULL;
 }
 
