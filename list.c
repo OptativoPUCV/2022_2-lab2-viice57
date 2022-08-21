@@ -88,7 +88,7 @@ void pushCurrent(List * list, void * data) {
   if(current == tail) {
     new->prev = current;
     current->next = new;
-    *tail = new;
+    tail = new;
   } else {
     new->prev = current;
     new->next = current->next;
