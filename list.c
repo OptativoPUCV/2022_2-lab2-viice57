@@ -120,7 +120,7 @@ Node * current = list->current;
   }
   
   //current = current->next;
-  free(current);
+  //free(current);
   return current->data;
 }
 
