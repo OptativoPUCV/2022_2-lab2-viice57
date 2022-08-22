@@ -900,3 +900,13 @@ list.c:122:3: error: expected expression before ‘/’ token
       |   ^
 Compilation failed
 1ae4165
+Mon 22 Aug 2022 03:57:56 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:122:3: error: expected expression before ‘/’ token
+  122 |   /free(current);
+      |   ^
+Compilation failed
+f85d258
