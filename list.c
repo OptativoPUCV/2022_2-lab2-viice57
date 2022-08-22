@@ -109,11 +109,11 @@ Node * current = list->current;
   if(!current) return NULL;
 
   if(current == list->head) {
-    list->head = current->next;
     current->next->prev = NULL;
+    list->head = current->next;
   } else if(current == list->tail) {
-    list->tail = current->prev;
     current->prev->next = NULL;
+    list->tail = current->prev;
   } else {
       current->prev->next = current->next;
       current->next->prev = current->prev;
