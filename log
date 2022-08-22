@@ -870,3 +870,18 @@ Mon 22 Aug 2022 03:55:02 AM UTC:
  tests:  12|0
 total_score: 70/70
 a9c0cff
+Mon 22 Aug 2022 03:57:11 AM UTC: 
+ list.c | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:107:15: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  107 | void * data = current->data;
+      |               ^~~~~~~
+      |               popCurrent
+list.c:107:15: note: each undeclared identifier is reported only once for each function it appears in
+list.c:123:3: error: expected expression before ‘/’ token
+  123 |   /free(current);
+      |   ^
+Compilation failed
+288a295
