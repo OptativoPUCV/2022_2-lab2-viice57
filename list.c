@@ -85,13 +85,12 @@ void pushCurrent(List * list, void * data) {
   
   if(current == list->tail) {
     new->prev = current;
-    current->next = new;
     list->tail = new;
   } else {
     new->prev = current;
     new->next = current->next;
-    current->next = new;
   }
+  current->next = new;
 }
 
 void * popFront(List * list) {
@@ -105,13 +104,13 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  /*Node * current = list->current;
+  Node * current = list->current;
   
   if(!current) return NULL;
 
-  if(current == list->head) {
+  if(!current->prev) {
     list->head = current->next;
-    current->next->prev = NULL;
+    list->head = NULL;
     current = current->next;
   }
   
