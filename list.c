@@ -29,11 +29,11 @@ Node * createNode(void * data) {
 }
 
 List * createList() {
-    List * l = (List *) malloc(sizeof(List));
+    List * list = (List *) malloc(sizeof(List));
 
-    l->head = NULL;
-    l->tail = NULL;
-    l->current = NULL;
+    list->head = NULL;
+    list->tail = NULL;
+    list->current = NULL;
 
     return l;
 }
@@ -104,28 +104,24 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  /*Node * current = list->current;
+  Node * current = list->current;
   
   if(!current) return NULL;
 
   if(!current->prev) {
-    list->head = current->next;
-    list->head = NULL;
+    current->prev = NULL;
     current = current->next;
-  }
-  
-  if(current == list->tail) {
-    list->tail = current->prev;
+  } else if(!current->next) {
     current->prev->next = NULL;
-    current = list->tail;
+    current = current->prev;
+  } else {
+      current->prev->next = current->next;
+      current->next->prev = current->prev;
+      current = current->next;
   }
 
-  current->prev->next = current->next;
-  current->next->prev = current->prev;
-  current = current->next;
-
-  free(current);*/
-  return NULL;
+  free(current);
+  return current->data;
 }
 
 void cleanList(List * list) {
