@@ -63,16 +63,15 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-  Node * new = createNode(data);
+  Node * newNode = createNode(data);
 
   if(list->head) {
-    list->head->prev = new;
-    new->next = list->head;
-    list->head = new;
+    list->head->prev = newNode;
+    newNode->next = list->head;
   } else {
-    list->head = new;
-    list->tail = new;
+    list->tail = newNode;
   }
+  list->head = newNode;
 }
 
 void pushBack(List * list, void * data) {
