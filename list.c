@@ -117,9 +117,9 @@ Node * current = list->current;
   } else {
       current->prev->next = current->next;
       current->next->prev = current->prev;
-      current = current->next;
   }
-  current = current->next;
+  
+  //current = current->next;
   free(current);
   return current->data;
 }
