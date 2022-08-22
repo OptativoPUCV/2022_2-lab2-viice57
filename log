@@ -885,3 +885,18 @@ list.c:123:3: error: expected expression before ‘/’ token
       |   ^
 Compilation failed
 288a295
+Mon 22 Aug 2022 03:57:31 AM UTC: 
+ list.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:108:7: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  108 |   if(!current) return NULL;
+      |       ^~~~~~~
+      |       popCurrent
+list.c:108:7: note: each undeclared identifier is reported only once for each function it appears in
+list.c:122:3: error: expected expression before ‘/’ token
+  122 |   /free(current);
+      |   ^
+Compilation failed
+1ae4165
